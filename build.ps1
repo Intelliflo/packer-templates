@@ -9,8 +9,6 @@ if(-not $env:ChocolateyInstall -or -not (Test-Path "$env:ChocolateyInstall")){
 
 if(!(Test-Path $env:ChocolateyInstall\lib\Psake*)) { cinst psake -y }
 if(!(Test-Path $env:ProgramFiles\Oracle\VirtualBox)) { cinst virtualbox -y }
-if(!(Test-Path $env:ChocolateyInstall\lib\WindowsAzurePowershell*)) { cinst WindowsAzurePowershell -y }
-if(!(Test-Path $env:ChocolateyInstall\lib\WindowsAzureLibsForNet*)) { cinst WindowsAzureLibsForNet -y }
 if(!(Get-Command vagrant -ErrorAction SilentlyContinue)) { cinst vagrant -y }
 if(!(Get-Command packer -ErrorAction SilentlyContinue)) { cinst packer -y }
 
