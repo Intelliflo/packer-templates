@@ -6,15 +6,16 @@ Enable-RemoteDesktop
 netsh advfirewall firewall add rule name="Remote Desktop" dir=in localport=3389 protocol=TCP action=allow
 
 Update-ExecutionPolicy -Policy Unrestricted
-
-if (Test-Command -cmdname 'Uninstall-WindowsFeature') {
+<#
+if (Check-Command -cmdname 'Uninstall-WindowsFeature') {
+>>>>>>> Comments out windows feature removal
     Write-BoxstarterMessage "Removing unused features..."
     Remove-WindowsFeature -Name 'Powershell-ISE'
     Get-WindowsFeature | 
     ? { $_.InstallState -eq 'Available' } | 
     Uninstall-WindowsFeature -Remove
 }
-
+#>
 
 Install-WindowsUpdate -AcceptEula
 
