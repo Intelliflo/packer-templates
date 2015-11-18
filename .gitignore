@@ -3,3 +3,7 @@ output-virtualbox-iso
 *.iso
 *.vhd
 *.box
+*.tar
+*.vmdk
+*.ovf
+*.zip
