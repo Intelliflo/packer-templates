@@ -34,7 +34,7 @@ task convert-tovhd {
 }
 
 task package-hyperv {
-  ."$env:chocolateyInstall\tools\7za.exe" a -ttar (join-path $baseDir "package-hyper-v.tar") (Join-Path $baseDir "hyper-v-output\*")
-  ."$env:chocolateyInstall\tools\7za.exe" a -tgzip (join-path $baseDir "package-hyper-v-$version.box") (join-path $baseDir "package-hyper-v.tar")
+  ."$env:chocolateyInstall\tools\7za.exe" a -ttar (join-path $baseDir "$version-hyper-v.tar") (Join-Path $baseDir "hyper-v-output\*")
+  ."$env:chocolateyInstall\tools\7za.exe" a -tgzip (join-path $baseDir "$version-hyper-v.box") (join-path $baseDir "$version-hyper-v.tar")
 }
 
